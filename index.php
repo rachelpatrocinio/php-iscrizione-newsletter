@@ -28,13 +28,20 @@ if($email){
         <div class="row">
             <div class="modal d-block d-flex align-items-center" tabindex="-1">
                 <div class="modal-dialog">
-                    <div class="modal-content">
+                    <div class="modal-content p-5">
                         <?php include __DIR__ . '/header.php';?>
                         <div class="modal-body">
-                            <form action="" method="POST">
+                            <form action="" method="POST" class="d-flex flex-column">
+                                <label for="name">Name</label>
+                                <input class="mb-3" type="text" name="name">
+
+                                <label for="name">Surname</label>
+                                <input class="mb-3" type="text" name="surname">
+
                                 <label for="email">E-mail</label>
-                                <input type="text" name="email">
-                                <button class="btn btn-primary">SEND</button>
+                                <input class="mb-3" type="text" name="email">
+
+                                <button class="btn btn-primary mt-4 mb-3">SUBSCRIBE</button>
                             </form>
                         </div>
                         <?php include __DIR__ . '/footer.php';?>
