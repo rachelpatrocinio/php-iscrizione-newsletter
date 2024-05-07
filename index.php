@@ -6,7 +6,12 @@ $email = $_POST["email"] ?? '';
 require_once __DIR__ . '/utilities.php';
 
 $validation = isCorrect($email);
+session_start();
+$_SESSION["validation"] = $validation;
 
+if($email){
+    header('Location: ./subscription.php');
+}
 ?>
 
 
