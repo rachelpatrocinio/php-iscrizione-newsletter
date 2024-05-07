@@ -1,13 +1,13 @@
 <?php
 
 $email = $_POST["email"] ?? null;
-var_dump($email);
+// var_dump($email);
 
 function isCorrect($email){
     if(str_contains($email,"@") && str_contains($email,".")){
-        return "La mail è corretta";
+        return '<div class="alert alert-success" role="alert">La mail è corretta!</div>';
     } else{
-        return 'La mail non è corretta';
+        return '<div class="alert alert-danger" role="alert">La mail non è corretta</div>';
     }
 }
 $validation = isCorrect($email);
