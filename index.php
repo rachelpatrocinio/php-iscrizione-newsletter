@@ -19,6 +19,11 @@ $validation = isCorrect($email);
     <title>php-iscrizione-newsletter</title>
 </head>
 <body class="p-5">
+
+    <?php
+    include './header.php';
+    ?>
+
     <div class="container">
         <div class="row">
             <form action="" method="POST">
