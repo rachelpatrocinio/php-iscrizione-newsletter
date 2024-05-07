@@ -1,7 +1,8 @@
 <?php
 session_start();
 $validation = $_SESSION["validation"];
-// var_dump($validation);
+$name = $_SESSION["name"];
+$surname = $_SESSION["surname"];
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +15,12 @@ $validation = $_SESSION["validation"];
 </head>
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row p-5">
+            <h5>Hello, 
+                <span class="<?php if($validation === true){echo "text-success";}if($validation === false){echo "text-danger";}?>">
+                    <?php echo $name?> <?php echo $surname?>
+                </span>!
+            </h5>
             <p>
                 <?php if($validation === false){echo '<div class="alert alert-danger" role="alert">La mail non è corretta</div>';}
                       if($validation === true){echo '<div class="alert alert-success" role="alert">La mail è corretta!</div>';}
