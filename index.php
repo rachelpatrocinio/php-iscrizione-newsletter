@@ -24,33 +24,24 @@ if($email){
     <title>php-iscrizione-newsletter</title>
 </head>
 <body>
-
     <div class="container">
         <div class="row">
             <div class="modal d-block d-flex align-items-center" tabindex="-1">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                    <div class="modal-header">
                         <?php include __DIR__ . '/header.php';?>
-                    </div>
-                    <div class="modal-body">
-                        <form action="" method="POST">
-                            <label for="email">E-mail</label>
-                            <input type="text" name="email">
-                            <button class="btn btn-primary">SEND</button>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <?php
-                        include __DIR__ . '/footer.php';
-                        ?>
+                        <div class="modal-body">
+                            <form action="" method="POST">
+                                <label for="email">E-mail</label>
+                                <input type="text" name="email">
+                                <button class="btn btn-primary">SEND</button>
+                            </form>
+                        </div>
+                        <?php include __DIR__ . '/footer.php';?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    
-
 </body>
 </html>
