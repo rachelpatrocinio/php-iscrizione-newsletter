@@ -26,7 +26,7 @@ if($email){
 <body class="p-5">
 
     <?php
-    include './header.php';
+    include __DIR__ . './header.php';
     ?>
 
     <div class="container">
@@ -42,7 +42,7 @@ if($email){
     </div>
 
     <?php
-    include './footer.php';
+    include __DIR__ . './footer.php';
     ?>
     
 </body>

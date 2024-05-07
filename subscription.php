@@ -3,7 +3,6 @@ session_start();
 $validation = $_SESSION["validation"];
 // var_dump($validation);
 
-session_unset();
 ?>
 <!DOCTYPE html>
 <html lang="en">
