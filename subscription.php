@@ -22,8 +22,9 @@ $surname = $_SESSION["surname"];
                 </span>!
             </h5>
             <p>
-                <?php if($validation === false){echo '<div class="alert alert-danger" role="alert">La mail non è corretta</div>';}
-                      if($validation === true){echo '<div class="alert alert-success" role="alert">La mail è corretta!</div>';}
+                <?php 
+                if($validation === false){echo '<div class="alert alert-danger text-danger" role="alert">La mail non è corretta</div>';}
+                if($validation === true){echo '<div class="alert alert-success text-success" role="alert">La mail è corretta!</div>';}
                 ?>
             </p>
         </div>
