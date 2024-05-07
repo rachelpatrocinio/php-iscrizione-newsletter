@@ -3,6 +3,15 @@
 $email = $_POST["email"] ?? null;
 var_dump($email);
 
+function isCorrect($email){
+    if(str_contains($email,"@") && str_contains($email,".")){
+        return "La mail è corretta";
+    } else{
+        return 'La mail non è corretta';
+    }
+}
+$validation = isCorrect($email);
+
 ?>
 
 
@@ -23,6 +32,7 @@ var_dump($email);
 
                 <button class="btn btn-primary">SEND</button>
             </form>
+            <p><?= $validation;?></p>
         </div>
     </div>
     
