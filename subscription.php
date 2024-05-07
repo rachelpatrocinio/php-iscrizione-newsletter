@@ -1,8 +1,15 @@
 <?php
 session_start();
-$validation = $_SESSION["validation"];
+$validation = $_SESSION["validation"] ?? '';
 $name = $_SESSION["name"];
 $surname = $_SESSION["surname"];
+
+if($validation === ''){
+    header('Location: ./index.php');
+}
+
+session_unset();
+session_destroy();
 
 ?>
 <!DOCTYPE html>
@@ -17,18 +24,35 @@ $surname = $_SESSION["surname"];
     <div class="container">
         <div class="row p-5">
             <h5>Hello, 
-                <span class="<?php if($validation === true){echo "text-success";}if($validation === false){echo "text-danger";}?>">
+                <span class="<?php if($validation === true){echo "text-success";}else{echo "text-danger";}?>">
                     <?php echo $name?> <?php echo $surname?>
                 </span>!
-            </h5>
-            <p>
                 <?php 
-                if($validation === false){echo '<div class="alert alert-danger text-danger" role="alert">La mail non è corretta</div>';}
-                if($validation === true){echo '<div class="alert alert-success text-success" role="alert">La mail è corretta!</div>';}
+                if($validation === true){
+                ?> 
+                Than you for the subscription!
+                <?php
+                }
                 ?>
-            </p>
+            </h5>
+
+            <?php 
+            if($validation === true){
+            ?>   
+
+            <div class="alert alert-success text-success" role="alert">La mail è corretta!</div>
+
+            <?php
+            }
+            else{
+            ?>
+
+            <div class="alert alert-danger text-danger" role="alert">La mail non è corretta</div>
+
+            <?php
+            }
+            ?>
         </div>
     </div>
-    
 </body>
 </html>
