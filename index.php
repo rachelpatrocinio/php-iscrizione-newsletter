@@ -23,26 +23,34 @@ if($email){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>php-iscrizione-newsletter</title>
 </head>
-<body class="p-5">
-
-    <?php
-    include __DIR__ . '/header.php';
-    ?>
+<body>
 
     <div class="container">
         <div class="row">
-            <form action="" method="POST">
-                <label for="email">E-mail</label>
-                <input type="text" name="email">
-
-                <button class="btn btn-primary">SEND</button>
-            </form>
+            <div class="modal d-block d-flex align-items-center" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <?php include __DIR__ . '/header.php';?>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="POST">
+                            <label for="email">E-mail</label>
+                            <input type="text" name="email">
+                            <button class="btn btn-primary">SEND</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <?php
+                        include __DIR__ . '/footer.php';
+                        ?>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <?php
-    include __DIR__ . '/footer.php';
-    ?>
     
+
 </body>
 </html>

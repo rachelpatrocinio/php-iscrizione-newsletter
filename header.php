@@ -1,9 +1,9 @@
 <header>
     <div class="container">
         <div class="row">
-            <h3>
+            <h5>
                 ISCRIVITI ALLA NOSTRA NEWSLETTER!
-            </h3>
+            </h5>
         </div>
     </div>
 </header>

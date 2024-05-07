@@ -1,8 +1,7 @@
 <footer>
     <div class="container">
-        <div class="row d-flex justify-content-between">
-            <div class="col-4">NESLETTER</div>
-            <div class="col-4">Patrocinio.com</div>
+        <div class="row d-flex flex-end">
+            <div class="col-12">Made by Rachel</div>
         </div>
     </div>
 </footer>
