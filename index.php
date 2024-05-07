@@ -35,6 +35,10 @@ $validation = isCorrect($email);
             <p><?php if($email !== ''){echo $validation;}?></p>
         </div>
     </div>
+
+    <?php
+    include './footer.php';
+    ?>
     
 </body>
 </html>
