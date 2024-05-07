@@ -1,3 +1,9 @@
+<?php
+
+$email = $_POST["email"] ?? null;
+var_dump($email);
+
+?>
 
 
 <!DOCTYPE html>
