@@ -26,7 +26,7 @@ if($email){
 <body class="p-5">
 
     <?php
-    include __DIR__ . './header.php';
+    include __DIR__ . '/header.php';
     ?>
 
     <div class="container">
@@ -37,12 +37,11 @@ if($email){
 
                 <button class="btn btn-primary">SEND</button>
             </form>
-            <p><?php if($email !== ''){echo $validation;}?></p>
         </div>
     </div>
 
     <?php
-    include __DIR__ . './footer.php';
+    include __DIR__ . '/footer.php';
     ?>
     
 </body>
