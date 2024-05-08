@@ -1,13 +1,11 @@
 <?php
-
-$email = $_POST["email"] ?? '';
-// var_dump($email);
-
 require_once __DIR__ . '/utilities.php';
 
+$email = $_POST["email"] ?? '';
 $validation = isCorrect($email);
 $name = $_POST["name"] ??'';
 $surname = $_POST["surname"] ?? '';
+
 session_start();
 $_SESSION["validation"] = $validation;
 $_SESSION["name"] = $name;
